@@ -1505,6 +1505,7 @@ body {
 }
 
 .top-categories {
+  overflow: hidden;
   padding-top: 52px;
 }
 
@@ -1881,6 +1882,7 @@ body {
 }
 
 .partners {
+  overflow: hidden;
   padding-top: 25px;
   position: relative;
   z-index: 2;
@@ -2026,6 +2028,7 @@ body {
 }
 
 .posts {
+  overflow: hidden;
   padding-top: 25px;
   position: relative;
   z-index: 1;
