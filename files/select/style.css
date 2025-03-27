@@ -1,0 +1,120 @@
+.select {
+	box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.14);
+	font-family: "PT Sans", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 130%;
+	position: relative;
+	width: 250px;
+	z-index: 5;
+}
+
+.select__header {
+	background-color: #fff;
+	cursor: pointer;
+	display: flex;
+	position: relative;
+}
+.select__header::after {
+	background-color: #fff;
+	bottom: 0;
+	content: '';
+	display: block;
+	height: 28%;
+	left: 0;
+	position: absolute;
+	pointer-events: none;
+	right: 0;
+	width: 100%;
+	z-index: 1;
+}
+.select__current {
+	padding: 12px 12px 12px 23px;
+	pointer-events: none;
+	user-select: none;
+
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -moz-box;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+.select__current .hidden-mobile {
+	font-style: normal;
+}
+.select__icon {
+	align-items: center;
+	display: flex;
+	flex-shrink: 0;
+	justify-content: center;
+	height: 18px;
+	margin: 14px 24px 0 auto;
+	pointer-events: none;
+	user-select: none;
+	text-align: center;
+	width: 18px;
+}
+.select.is-active .select__icon {
+	transform: scale(1, -1);
+}
+
+.select__body {
+	background-color: #fff;
+	box-shadow: 0px 5px 12px 0px rgba(0, 0, 0, 0.25);
+	display: none;
+	left: 0;
+	overflow-y: auto;
+	max-height: 375px;
+	position: absolute;
+	right: 0;
+	top: 100%;
+	z-index: 5;
+}
+.select__body::-webkit-scrollbar {
+	width: 8px;
+}
+.select__body::-webkit-scrollbar-track {
+	background-color: #EFEFEF;
+}
+.select__body::-webkit-scrollbar-thumb {
+	background-color: #D5D5D5;
+}
+.select.is-active .select__body {
+	display: block;
+}
+.select__item {
+	cursor: pointer;
+	padding: 8px 8px 8px 23px;
+	user-select: none;
+}
+
+.select__item.current,
+.select__item:hover {
+	/*background-color: #f2f2f2;*/
+	color: #174780;
+}
+
+@media (max-width: 720px) {
+
+	.select {
+		font-size: 14px;
+	}
+	.select__current {
+		padding: 9px 5px 9px 12px;
+	}
+	.select__current .hidden-mobile {
+		display: none;
+	}
+	.select__icon {
+		margin: 10px 8px 0 auto;
+   }
+	.select__body {
+		max-height: 287px;
+		padding-bottom: 10px;
+		padding-top: 10px;
+  	}
+	.select__item {
+		padding: 6px 6px 5px 12px;
+	}
+}
