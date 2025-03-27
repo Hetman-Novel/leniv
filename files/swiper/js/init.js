@@ -13,6 +13,124 @@ lazyImages.forEach(addLoadedClass); // Loop through all the images and call the 
 
 /* === */
 
+/* top-categories (front page) -> */
+let topCategoriesSlider = document.getElementById('top-categories-slider');
+new Swiper(topCategoriesSlider, {
+   navigation: {
+      prevEl: '#top-categories-slider-button-prev',
+      nextEl: '#top-categories-slider-button-next',
+   },
+   slidesPerView: 3,
+   slidesPerGroup: 1,
+   autoHeight: false,
+   watchOverflow: true,
+   spaceBetween: 21,
+   speed: 800,
+   effect: 'slide',
+   breakpoints: {
+      0: {
+         autoHeight: true,
+         slidesPerView: 1,
+         effect: 'fade',
+         fadeEffect: {
+            crossFade: true
+         },
+      },
+      576: {
+         effect: 'slide',
+         slidesPerView: 2,
+         autoHeight: false,
+      },
+      992: {
+         effect: 'slide',
+         slidesPerView: 3,
+      }
+   },
+   preloadImages: false,
+   lazy: {
+      loadOnTransitionStart: false,
+      loadPrewNext: false,
+   },
+   watchSlidesProgress: true,
+   watchSlidesVisibility: true,
+});
+/* <- top-categories (front page) */
+
+/* Partners (front page) -> */
+let partnersSlider = document.getElementById('partners-slider');
+new Swiper(partnersSlider, {
+   navigation: {
+      prevEl: '#partners-slider-button-prev',
+      nextEl: '#partners-slider-button-next',
+   },
+   slidesPerView: 4,
+   slidesPerGroup: 1,
+   watchOverflow: true,
+   spaceBetween: 20,
+   speed: 800,
+   effect: 'slide',
+   breakpoints: {
+      0: {
+         slidesPerView: 2,
+      },
+      641: {
+         slidesPerView: 3,
+      },
+      992: {
+         slidesPerView: 4,
+      }
+   },
+   preloadImages: false,
+   lazy: {
+      loadOnTransitionStart: false,
+      loadPrewNext: false,
+   },
+   watchSlidesProgress: true,
+   watchSlidesVisibility: true,
+});
+/* <- Partners (front page) */
+
+/* Blog (front page) -> */
+let postsSlider = document.getElementById('posts-slider');
+new Swiper(postsSlider, {
+   navigation: {
+      prevEl: '#posts-slider-button-prev',
+      nextEl: '#posts-slider-button-next',
+   },
+   slidesPerView: 3,
+   slidesPerGroup: 1,
+   autoHeight: false,
+   watchOverflow: true,
+   spaceBetween: 21,
+   speed: 800,
+   effect: 'slide',
+   breakpoints: {
+      0: {
+         autoHeight: true,
+         slidesPerView: 1,
+         effect: 'fade',
+         fadeEffect: {
+            crossFade: true
+         },
+      },
+      576: {
+         slidesPerView: 2,
+         autoHeight: false,
+      },
+      992: {
+         slidesPerView: 3,
+      }
+   },
+   preloadImages: false,
+   lazy: {
+      loadOnTransitionStart: false,
+      loadPrewNext: false,
+   },
+   watchSlidesProgress: true,
+   watchSlidesVisibility: true,
+});
+/* <- Blog (front page) */
+
 function initializeSliderTwoImage(sliderId, prevBtnId, nextBtnId) {
    const slider = document.getElementById(sliderId);
    if (slider) {
