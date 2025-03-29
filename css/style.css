@@ -534,6 +534,8 @@ h6 {
   text-transform: uppercase;
 }
 
+.page_title,
+.page-title,
 .page__title {
   font-size: 48px;
   font-weight: 400;
@@ -4438,6 +4440,8 @@ body {
     font-size: 24px;
   }
 
+  .page_title,
+  .page-title,
   .page__title {
     font-size: 26px;
     margin: 0 0 23px 19px;
